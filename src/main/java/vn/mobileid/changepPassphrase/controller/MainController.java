@@ -4,19 +4,19 @@
  */
 package vn.mobileid.changepPassphrase.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author Ngọc Triệu
+ * @author Admin
  */
-@Controller
-@RequestMapping("/changepPassphrase")
-public class WebController {
-    @GetMapping(value = {"/{path:[^\\.]*}", "/{path:^(?!api).*$}/**/{path:[^\\.]*}"})
-    public String getIndex() {
-        return "/index.html"; 
+@RestController
+@RequestMapping("/api")
+public class MainController {
+    @GetMapping("/connect")
+    public String Demo(){
+    return "connected Server";
     }
 }
